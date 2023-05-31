@@ -1,0 +1,163 @@
+#encabezado {
+    margin-left: 5%;
+    font-family: serif 15pt;
+    /*border: 1px solid black;*/
+    width: 80%;
+    height: 20%;
+    /*background-color: #fffff;*/
+}
+
+#logo {
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 0%;
+    width: 30%;
+    height: 40%;
+    float: left;
+    /*border: 1px solid yellow;*/
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left: 1%;
+    padding-right: 2%;
+}
+
+#titulo {
+    font-family: serif 15pt;
+/ / margin-top: 8 %;
+    margin-left: 0%;
+    padding-top: 10%;
+    width: 34%;
+    height: 61%;
+    float: left;
+}
+
+#tit {
+    alignment-adjust: central;
+    alignment-baseline: central;
+}
+.originalText{
+    left: 50%;
+}
+#inf {
+    margin-top: 6%;
+
+    /*border: 1px solid red;*/
+    float: right;
+    width: 26%;
+    height: 30%;
+}
+
+#informacion {
+    margin-left: 5%;
+    margin-top: 3%;
+    /*border: 1px solid black;*/
+    width: 85%;
+    height: auto;
+}
+
+/*                .tabla {
+                    font-family: Verdana, Arial, Helvetica, sans-serif;
+                    font-size:11px;
+                    text-align: left;
+                    width: 94%;
+                }*/
+/*                .tabla>tr>td {
+                    font-family: Verdana, Arial, Helvetica, sans-serif;
+                    font-size:11px;
+                    text-align: right;
+                    width: 95%;
+                    padding-left: 1%;
+                }*/
+.tabla th {
+    padding: 3px;
+    font-size: 16px;
+    background-color: #83aec0;
+    background-image: url(fondo_th.png);
+    background-repeat: repeat-x;
+    color: #FFFFFF;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border: 1px solid black;
+    border-bottom-style: solid;
+    border-right-color: #558FA6;
+    border-bottom-color: #558FA6;
+    font-family: “Trebuchet MS”, Arial;
+/ / text-transform: uppercase;
+}
+
+.tabla .modo1 {
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #e2ebef;
+    background-image: url(fondo_tr01.png);
+    border: 1px solid black;
+    background-repeat: repeat-x;
+    color: #34484E;
+    font-family: “Trebuchet MS”, Arial;
+}
+
+.tabla .modo1 td {
+    padding: 5px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border: 1px solid black;
+    border-right-color: #A4C4D0;
+    border-bottom-color: #A4C4D0;
+    text-align: left;
+}
+
+.tabla .modo2 {
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #fdfdf1;
+    background-image: url(fondo_tr02.png);
+    background-repeat: repeat-x;
+    color: black;
+    font-family: “Trebuchet MS”, Arial;
+    text-align: right;
+}
+
+.tabla .modo2 td {
+    padding: 5px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-right-color: #EBE9BC;
+    border-bottom-color: #EBE9BC;
+}
+
+.tabla .modo2 th {
+    background-image: url(fondo_tr02a.png);
+    background-position: left top;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #fdfdf1;
+    background-repeat: repeat-x;
+    color: #990000;
+    font-family: “Trebuchet MS”, Arial;
+    text-align: left;
+
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-right-color: #EBE9BC;
+    border-left-color: #EBE9BC;
+    border-bottom-color: #EBE9BC;
+}
+
+.wrap {
+    position: relative;
+    margin: 0 auto;
+    width: 960px;
+}
+
+#header, #footer {
+    width: 100%;
+    float: left;
+}

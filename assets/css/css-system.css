@@ -1,0 +1,98 @@
+.background-login{
+    background-image: url("../images/img-background2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #e7c3c3;
+    max-height: 865px;
+}
+
+table{
+    width: 100% !important;
+}
+
+.ui-menu {
+    list-style:none;
+    padding: 2px;
+    margin: 0;
+    display:block;
+    float: left;
+}
+.ui-menu .ui-menu {
+    margin-top: -3px;
+}
+.ui-menu .ui-menu-item {
+    margin:0;
+    padding: 0;
+    zoom: 1;
+    float: left;
+    clear: left;
+    width: 100%;
+}
+.ui-menu .ui-menu-item a {
+    text-decoration:none;
+    display:block;
+    padding:.2em .4em;
+    line-height:1.5;
+    zoom:1;
+}
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active {
+    font-weight: normal;
+    margin: -1px;
+}
+
+/*Estilo para cabecera de un formulario de modal*/
+.cabecera_modal {
+    background-color: #f44336;
+}
+
+/*Estilo para titulo de un formulario de modal*/
+.titulo_modal {
+    color: white;
+    font-size: 50pt;
+}
+
+/*Estilo para cabecera de un formulario de frm*/
+.cabecera_frm {
+    background-color: #f44336;
+}
+
+/*Estilo para titulo de un formulario de frm*/
+.titulo_frm {
+    color: white !important;
+    font-size: 20pt;
+}
+
+/* Estilo para quitar flechas de input de tipo number */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.abm-error, .modal-error {
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+}
+
+input[type=number] {
+
+    -moz-appearance: textfield;
+
+}
+
+ul.ui-autocomplete {
+    z-index: 1100;
+}
+
+.text-align-left {
+    text-align: left !important;
+}
+
+/*Estilo para los Legend tengan un mayor alto, para poner inputs a continucacion*/
+.legend-button{
+    height: 40px !important;
+}

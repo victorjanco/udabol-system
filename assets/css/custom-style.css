@@ -1,0 +1,105 @@
+#sortable-gallery { list-style-type: none; margin: 0; padding: 0; }
+#sortable-gallery li { cursor: pointer; margin: 3px 3px 3px 0; padding: 1px; float: left; width: 250px; height: 130px; z-index: -1 }
+#sortable-gallery div { width: 100%; height: 100%; }
+#sortable-gallery img { width: 100%; height: 100%; }
+.delete-img {
+    display: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    width: 40px;
+    height: 40px;
+    /*top: 0;
+    right: 0;*/
+    position: absolute;
+    text-align: center;
+    line-height: 40px;
+    z-index: 100;
+}
+
+.img-container:hover .delete-img {
+    display: block;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.has-priority .checkbox, .has-priority .checkbox-inline,.has-priority .control-label, .has-priority .help-block,
+.has-priority .radio,.has-priority .radio-inline,.has-priority.checkbox label, .has-priority.checkbox-inline label,
+.has-priority.radio label,.has-priority.radio-inline label {
+    color:#3065b5
+}
+.has-priority .form-control{
+    border-color: #3065b3;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow:inset 0 1px 1px rgba(0,0,0,.075)
+}
+.has-priority .form-control:focus{
+    border-color:#66512c;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b;
+    box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b
+}
+.has-priority .input-group-addon{
+    color:#3065b5;
+    /*background-color:#fcf8e3;*/
+    border-color:#3065b5
+}
+.has-priority .form-control-feedback{
+    color:#3065b5
+}
+
+/* AdminLTE override styles */
+.form-group.has-priority label {
+    color:#3065b5
+}
+.form-group.has-priority .form-control,.form-group.has-priority .input-group-addon{
+    border-color:#3065b5;
+    box-shadow:none
+}
+.form-group.has-priority .help-block{
+    color:#3065b5
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.has-bold .checkbox, .has-bold .checkbox-inline,.has-bold .control-label, .has-bold .help-block,
+.has-bold .radio,.has-bold .radio-inline,.has-bold.checkbox label, .has-bold.checkbox-inline label,
+.has-bold.radio label,.has-bold.radio-inline label {
+    color:#3065b5
+}
+.has-bold .form-control{
+    border-color: #2a2a2a;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow:inset 0 1px 1px rgba(0,0,0,.075)
+}
+.has-bold .form-control:focus{
+    border-color:#2a2a2a;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 1px #2a2a2a;
+    box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 1px #2a2a2a;
+}
+.has-bold .input-group-addon{
+    color:#2a2a2a;
+    /*background-color:#fcf8e3;*/
+    border-color:#2a2a2a
+}
+
+/* AdminLTE override styles */
+.form-group.has-bold label {
+    color:#2a2a2a
+}
+.form-group.has-bold .form-control,.form-group.has-bold .input-group-addon{
+    border-color:#2a2a2a;
+    box-shadow:none
+}
+.form-group.has-bold .help-block{
+    color:#2a2a2a
+}

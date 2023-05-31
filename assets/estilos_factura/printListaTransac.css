@@ -1,0 +1,92 @@
+body {
+    background: rgba(0,0,0,0.2);
+    font-family: Arial;
+    font-size: x-small;
+}
+.navbar-default{
+    display: none !important;
+    width: 0px !important;
+    height: 0px !important;
+    margin: 0px!important;
+    padding: 0px!important;
+    
+}
+.sidebar-collapse{
+     display: none !important;
+    width: 0px !important;
+    height: 0px !important;
+    margin: 0px!important;
+    padding: 0px!important;
+}
+.footer{
+    display: none !important;
+    width: 0px !important;
+    height: 0px !important;
+    margin: 0px!important;
+    padding: 0px!important;
+}
+
+#noPrint{
+    display: none !important;
+}
+a{
+    display: none
+}
+#titulo{
+    font-size: medium !important;
+    font-weight: bold;
+}
+
+.mitabla {
+    width: 100% !important;
+    border:0,5px black !important;
+}
+.mitabla thead th {
+    border: 0,5px black !important;
+    padding:5 7 !important;
+    font-size: x-small !important;
+}
+
+.mitabla td {
+    border-radius:0px !important;
+    border:0px  black !important;
+    padding:3 5 !important;
+    font-size: x-small !important;
+    width: auto;
+}
+#buscador{
+    padding: 0 0 !important;
+    margin: 0% !important;
+    width: 100%;
+}
+#buscador table{
+    padding: 0% 0% !important;
+    margin: 0% !important;
+    width: 100%;
+}
+#buscador table tr td{
+    padding: 0% 0% !important;
+    margin: 0% !important;
+    border: 0px !important;
+}
+#buscador label{
+    font-size: x-small !important;
+}
+#buscador input{
+    font-size: x-small !important;
+    padding: 0% 0% !important;
+    margin: 0% !important;
+}
+#buscador select{
+    font-size: x-small !important;
+}
+#mostrarUser{
+    visibility: visible !important;
+    font-size: small;
+}
+#mostrarUser label{
+    font-size: x-small;
+}
+input{
+    border:  #777 solid thin;
+}
