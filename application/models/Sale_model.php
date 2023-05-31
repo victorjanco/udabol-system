@@ -276,7 +276,7 @@ class Sale_model extends CI_Model
 	
 			if (verify_session()) {
 	
-				if(verify_cash_session()){
+				// if(verify_cash_session()){
 					$sale_subtotal = floatval($this->input->post('sale_subtotal'));
 					$sale_discount = floatval($this->input->post('sale_discount'));
 					$sale_total = floatval($this->input->post('sale_total'));
@@ -366,35 +366,35 @@ class Sale_model extends CI_Model
 						if (strlen($monto_cambio) == 0) {
 							$monto_cambio = 0;
 						}
-						$data_cash_income = array(
-							'nro_transaccion'=>$this->cash_income_model->get_number_transaction(),
-							'nro_ingreso'=> strval($this->cash_income_model->get_number_transaction()),
-							'detalle' => 'INGRESO POR VENTAS',
-							'monto_venta' => number_format($sale_total, 2, '.', ''),
-							'monto_bs' => number_format($monto_bs, 2, '.', ''),
-							'monto_sus' => number_format($monto_sus, 2, '.', ''),
-							'monto_tarjeta' => number_format($monto_tarjeta, 2, '.', ''),
-							'monto_cheque' => number_format($monto_cheque, 2, '.', ''),
-							'monto_efectivo' => number_format($monto_efectivo, 2, '.', ''),
-							'monto_cambio' => number_format($monto_cambio, 2, '.', ''),
-							'fecha_ingreso' => date('Y-m-d'),
-							'fecha_registro' => date('Y-m-d H:i:s'),
-							'fecha_modificacion' => date('Y-m-d H:i:s'),
-							'estado' => ACTIVO,
-							'tipo_ingreso_caja_id'=> $this->cash_income_type_model->get_first()->id,
-							'caja_id'=> get_session_cash_id(),
-							'apertura_caja_id'=> get_session_cash_aperture_id(),
-							'sucursal_id' => get_branch_id_in_session(),
-							'user_created' => get_user_id_in_session(),
-							'user_updated' => get_user_id_in_session(),
-						);
-						$this->cash_income_model->_insert_cash_income($data_cash_income);
-						$cash_income_inserted = $this->cash_income_model->_get_cash_income($data_cash_income);
-						$data_cash_income_sale = array(
-							'ingreso_caja_id'=>$cash_income_inserted->id,
-							'venta_id'=> $sale_entry_inserted->id
-						);
-						$this->_insert_cash_income_sale($data_cash_income_sale);
+						// $data_cash_income = array(
+						// 	'nro_transaccion'=>$this->cash_income_model->get_number_transaction(),
+						// 	'nro_ingreso'=> strval($this->cash_income_model->get_number_transaction()),
+						// 	'detalle' => 'INGRESO POR VENTAS',
+						// 	'monto_venta' => number_format($sale_total, 2, '.', ''),
+						// 	'monto_bs' => number_format($monto_bs, 2, '.', ''),
+						// 	'monto_sus' => number_format($monto_sus, 2, '.', ''),
+						// 	'monto_tarjeta' => number_format($monto_tarjeta, 2, '.', ''),
+						// 	'monto_cheque' => number_format($monto_cheque, 2, '.', ''),
+						// 	'monto_efectivo' => number_format($monto_efectivo, 2, '.', ''),
+						// 	'monto_cambio' => number_format($monto_cambio, 2, '.', ''),
+						// 	'fecha_ingreso' => date('Y-m-d'),
+						// 	'fecha_registro' => date('Y-m-d H:i:s'),
+						// 	'fecha_modificacion' => date('Y-m-d H:i:s'),
+						// 	'estado' => ACTIVO,
+						// 	'tipo_ingreso_caja_id'=> $this->cash_income_type_model->get_first()->id,
+						// 	'caja_id'=> get_session_cash_id(),
+						// 	'apertura_caja_id'=> get_session_cash_aperture_id(),
+						// 	'sucursal_id' => get_branch_id_in_session(),
+						// 	'user_created' => get_user_id_in_session(),
+						// 	'user_updated' => get_user_id_in_session(),
+						// );
+						// $this->cash_income_model->_insert_cash_income($data_cash_income);
+						// $cash_income_inserted = $this->cash_income_model->_get_cash_income($data_cash_income);
+						// $data_cash_income_sale = array(
+						// 	'ingreso_caja_id'=>$cash_income_inserted->id,
+						// 	'venta_id'=> $sale_entry_inserted->id
+						// );
+						// $this->_insert_cash_income_sale($data_cash_income_sale);
 					}
 					/////////////////////////////////////////////////////////////////////////////////////////////
 					$this->_insert_sale_inventory($data_sale_inventory);
@@ -646,9 +646,9 @@ class Sale_model extends CI_Model
 	
 						}
 					}
-				} else {
-					$response['cash'] = TRUE;
-				}
+				// } else {
+				// 	$response['cash'] = TRUE;
+				// }
 			} else {
 				$response['login'] = TRUE;
 			}

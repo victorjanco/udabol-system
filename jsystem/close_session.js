@@ -20,11 +20,11 @@ $(document).ready(function () {
                 showCancelButton: false,
                 confirmButtonColor: "#DD6B55",
                 confirmButtonText: "Ok!",
-                closeOnConfirm: false,
+                closeOnConfirm: true,
                 closeOnCancel: true
             },
             function (isConfirm) {
-                $.redirect(siteurl("home"));
+                // $.redirect(siteurl("home"));
             });
         }
     }

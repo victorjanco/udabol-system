@@ -168,12 +168,12 @@
                     </a>
                 </li>
                 <?= $this->multi_menu->render(); ?>
-                <li class="active">
+                <!-- <li class="active">
                     <a class="menu-toggle" id="select_cash_and_permission_close_cash" class="menu-toggle">
                         <i class="material-icons">attach_money</i>
                         <span> CERRAR CAJA </span>
                     </a>
-                </li>
+                </li> -->
                 <li class="active">
                     <!-- <a class="menu-toggle" id="close_session">
                         <i class="material-icons">power_settings_new</i>

@@ -13,19 +13,19 @@ $(document).ready(function () {
             console.log(cash_id);
             console.log(cash_aperture_id);
             // alert('CAJA NO APERTURADA');
-            swal({
-                title: "Caja No aperturada",
-                text: "La caja  no fue aperturada",
-                type: "warning",
-                showCancelButton: false,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Ok!",
-                closeOnConfirm: false,
-                closeOnCancel: true
-            },
-            function (isConfirm) {
-                $.redirect(siteurl("home"));
-            });
+            // swal({
+            //     title: "Caja No aperturada",
+            //     text: "La caja  no fue aperturada",
+            //     type: "warning",
+            //     showCancelButton: false,
+            //     confirmButtonColor: "#DD6B55",
+            //     confirmButtonText: "Ok!",
+            //     closeOnConfirm: false,
+            //     closeOnCancel: true
+            // },
+            // function (isConfirm) {
+            //     // $.redirect(siteurl("home"));
+            // });
         }
     }
 
