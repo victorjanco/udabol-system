@@ -1,11 +1,5 @@
 <?php
 
-/**
- *  * Created by PhpStorm.
- * User: Ariel Alejandro Gomez Chavez ( @ArielGomez )
- * Date: 11/9/2017
- * Time: 6:05 PM
- */
 class Sale_model extends CI_Model
 {
 	public function __construct()

@@ -6,7 +6,7 @@
  * Time: 12:37 AM
  */
 ?>
-<div class="card">
+<div class="card" style="background:#ffffff1f;">
     <div class="body">
         <form method="POST" action="<?= site_url('login/sign_in') ?>">
             <div class="msg">Ingrese los datos para iniciar sesion</div>

@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ariel
- * Date: 12/07/2017
- * Time: 10:09 AM
- */
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>LAST LEVEL</title>
+    <title>UDABOL</title>
     <!-- Favicon-->
     <link rel="icon" type="image/ico" href="<?= base_url('assets/images/logo.ico') ?>"/>
 
@@ -161,6 +156,7 @@
                         <span>INICIO</span>
                     </a>
                 </li>
+
                 <li>
                     <a id="user_profile">
                         <i class="material-icons">account_box</i>

@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>LOGIN  LAST LEVEL</title>
+    <title>LOGIN</title>
     <!-- Favicon-->
     <link rel="icon" type="image/ico" href="<?= base_url('assets/images/logo.ico') ?>"/>
     <!-- Google Fonts -->
@@ -33,7 +33,7 @@
 <body class="login-page background-login">
 <div class="login-box">
     <div class="logo">
-        <a href="javascript:void(0);"><b>LAST LEVEL</b></a>
+        <a href="javascript:void(0);"><b>SISTEMA VENTAS</b></a>
         <small>Software</small>
     </div>
     <?php $this->view('login/content') ?>
