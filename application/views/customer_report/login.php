@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>LAST LEVEL</title>
+    <title>SISTEMA VENTA</title>
 
     <!-- Favicon-->
     <link rel="icon" type="image/png" href="<?= base_url('assets/images/logo.png') ?>"/>

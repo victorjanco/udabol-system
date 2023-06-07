@@ -973,7 +973,7 @@ class Inventory extends CI_Controller
 			/* 1ra fila   */
 //			$this->pdf->SetFont('Arial', 'B', 8);
 //			$this->pdf->Cell(115, 5, '', 0, 0, 'C');
-//			$this->pdf->Cell(80, 5, utf8_decode('LAST LEVEL'), 0, 0, 'C');
+//			$this->pdf->Cell(80, 5, utf8_decode('SISTEMA VENTA'), 0, 0, 'C');
 
 			/*2da fila*/
 			$this->pdf->Ln(5);

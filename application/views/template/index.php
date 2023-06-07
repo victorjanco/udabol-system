@@ -137,7 +137,7 @@
             <!--<a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse"
                data-target="#navbar-collapse" aria-expanded="false"></a>-->
             <a href="javascript:void(0);" class="bars"></a>
-            <a class="navbar-brand" href="<?= site_url('home/index') ?>"> LAST LEVEL </a>
+            <a class="navbar-brand" href="<?= site_url('home/index') ?>"> SISTEMA VENTA </a>
         </div>
             <div class="nav navbar-nav navbar-right">
                 <div align="center">
