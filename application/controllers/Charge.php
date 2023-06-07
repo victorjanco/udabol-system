@@ -1,63 +1,73 @@
 <?php
 
-class Brand extends CI_Controller
+class charge extends CI_Controller
 {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('brand_model');
+		$this->load->model('charge_model');
 	}
 
 	/*Mandar al index para cargar la lista de marcas*/
 	public function index()
 	{
-		template('brand/index');
+		template('charge/index');
 	}
 
 	/*Para registrar la nueva marca*/
-	public function register_brand()
+	public function register_charge()
 	{
-		if ($this->input->is_ajax_request()) {
-			echo $this->brand_model->register_brand();
-		} else {
-			show_404();
+		try {
+			if ($this->input->is_ajax_request()) {
+				echo json_encode($this->charge_model->register_charge());
+			} else {
+				show_404();
+			}
+		} catch (\Throwable $th) {
+			throw $th;
 		}
+		
 	}
 
 	/*Para modificar una marca*/
-	public function modify_brand()
+	public function modify_charge()
 	{
-		if ($this->input->is_ajax_request()) {
-			echo $this->brand_model->modify_brand();
-		} else {
-			show_404();
+		try {
+			if ($this->input->is_ajax_request()) {
+				echo json_encode($this->charge_model->modify_charge());
+			} else {
+				show_404();
+			}	
+		} catch (\Throwable $th) {
+			throw $th;
 		}
+		
 	}
 
 	/*Para eliminar un marca seleccionado de la lista*/
-	public function disable_brand()
+	public function disable_charge()
 	{
 		if ($this->input->is_ajax_request()) {
-			echo $this->brand_model->disable_brand();
+			echo $this->charge_model->disable_charge();
 		} else {
 			show_404();
 		}
 	}
 
 	/*Obtener todas las marcas activos especial para cargar combos o autocompletados*/
-	public function get_brand_enable()
+	public function get_charge_enable()
 	{
 		if ($this->input->is_ajax_request()) {
 
-			$brand_list = $this->brand_model->get_brand_enable();
-			echo json_encode($brand_list);
+			$charge_list = $this->charge_model->get_charge_enable();
+			echo json_encode($charge_list);
 		} else {
 			show_404();
 		}
 	}
 
 	/*Para cargar la lista de marcas en el dataTable*/
-	public function get_brand_list()
+	public function get_charge_list()
 	{
 		if ($this->input->is_ajax_request()) {
 			// Se recuperan los parametros enviados por datatable
@@ -77,7 +87,7 @@ class Brand extends CI_Controller
 				'order' => $order
 			);
 
-			echo json_encode($this->brand_model->get_brand_list($params));
+			echo json_encode($this->charge_model->get_charge_list($params));
 		} else {
 			show_404();
 		}
