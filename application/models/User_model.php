@@ -12,6 +12,7 @@ class User_model extends CI_Model
     {
         parent::__construct();
         $this->load->library('form_validation');
+        $this->load->model('office_model');
     }
     public function get_userss()
     {
@@ -190,11 +191,13 @@ class User_model extends CI_Model
 
                     // Ver si el cargo es del admininstrador
                     $this->log_user_permissions($menu, $id_user);
+                    $branch_office = $this->office_model->first();
                     // Registramos las sucursales seleccionadas
                     $list_offices = $this->input->post('seleccion_sucursal');
-                    foreach ($list_offices as $row) {
-                        $this->db->insert('usuario_sucursal', array('usuario_id' => $id_user, 'sucursal_id' => $row));
-                    }
+                    // foreach ($list_offices as $row) {
+                        // $this->db->insert('usuario_sucursal', array('usuario_id' => $id_user, 'sucursal_id' => $row));
+                        $this->db->insert('usuario_sucursal', array('usuario_id' => $id_user, 'sucursal_id' => $branch_office->id));
+                    // }
                 } else {
                     $response['messages'] = 'error';
                     $this->db->trans_rollback();

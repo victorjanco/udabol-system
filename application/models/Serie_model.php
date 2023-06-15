@@ -14,6 +14,11 @@ class Serie_model extends CI_Model
         parent::__construct();
     }
 
+    public function first()
+    {
+        return $this->db->get('serie')->row();
+    }
+
     public function get_all_serie(){
         $this->db->select('*')
             ->from('serie')

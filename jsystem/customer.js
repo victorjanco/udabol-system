@@ -141,7 +141,7 @@ function get_customer_list() {
             {data: 'ci', class: 'text-center'},
             // {data: 'nit', class: 'text-center'},
             {data: 'nombre', class: 'text-center'},
-            {data: 'tipo_cliente', class: 'text-center'},
+            // {data: 'tipo_cliente', class: 'text-center'},
             {data: 'telefono1', class: 'text-center'},
             {data: 'estado', class: 'text-center'},
             {data: 'opciones', class: 'text-center'}
@@ -150,18 +150,20 @@ function get_customer_list() {
             targets: 0,
             visible: false,
             searchable: false
-        }, {
-            targets: 3,
-            render: function (data) {
-                return get_type_customer(parseInt(data));
-            }
-        }, {
-            targets: 5,
+        }, 
+        // {
+        //     targets: 3,
+        //     render: function (data) {
+        //         return get_type_customer(parseInt(data));
+        //     }
+        // }, 
+        {
+            targets: 4,
             render: function (data) {
                 return state_crud(data);
             }
         }, {
-            targets: 6,
+            targets: 5,
             orderable: false,
             render: function (data, type, row) {
                 if (row.estado != 0) {

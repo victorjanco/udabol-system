@@ -13,6 +13,11 @@ class Group_model extends CI_Model
         parent::__construct();
     }
 
+    public function first()
+    {
+        return $this->db->get('grupo')->row();
+    }
+
     public function get_groups($type = 'object'){
         $sql_query = "SELECT grp.* FROM grupo grp WHERE grp.estado = 1 AND grp.tipo = 1";
         return $this->db->query($sql_query)->result($type);

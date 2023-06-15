@@ -95,18 +95,21 @@ class Product_model extends CI_Model
             /* VALIDACION DEL LOS CAMPOS DEL FORMULARIO */
             $this->form_validation->set_rules('codigo', 'codigo', 'trim|required|is_unique[producto.codigo]');
             $this->form_validation->set_rules('comercial', 'nombre comercial', 'trim|required');
-            $this->form_validation->set_rules('generico', 'nombre generico', 'trim');
+            // $this->form_validation->set_rules('generico', 'nombre generico', 'trim');
             $this->form_validation->set_rules('precio_venta', 'precio venta', 'trim|required');
             $this->form_validation->set_rules('precio_costo', 'precio costo', 'trim|required');
             $this->form_validation->set_rules('minimum_stock', 'Stock minimo', 'trim|required');
             $this->form_validation->set_rules('percent_commission', 'Porcentaje comision', 'trim|required');
-            $this->form_validation->set_rules('grupo', 'Debe seleccionar una marca por favor', sprintf("trim|required|in_list[%s]", implode_array($this->group_model->get_groups(), 'id')));
+            // $this->form_validation->set_rules('grupo', 'Debe seleccionar una marca por favor', sprintf("trim|required|in_list[%s]", implode_array($this->group_model->get_groups(), 'id')));
             $this->form_validation->set_rules('modelo', 'modelo', sprintf("trim|required|in_list[%s]", implode_array($this->model_model->get_model_enable(), 'id')));
-            $this->form_validation->set_rules('medida', 'medida', sprintf("trim|required|in_list[%s]", implode_array($this->unit_model->get_units(), 'id')));
-            $this->form_validation->set_rules('serie', 'serie', sprintf("trim|required|in_list[%s]", implode_array($this->serie_model->get_all_serie(), 'id')));
+            // $this->form_validation->set_rules('medida', 'medida', sprintf("trim|required|in_list[%s]", implode_array($this->unit_model->get_units(), 'id')));
+            // $this->form_validation->set_rules('serie', 'serie', sprintf("trim|required|in_list[%s]", implode_array($this->serie_model->get_all_serie(), 'id')));
             $this->form_validation->set_rules('proveedores[]', 'proveedor', sprintf("trim|required|in_list[%s]", implode_array($this->proveider_model->get_proveiders(), 'id')));
 
             $this->form_validation->set_error_delimiters('<label class="abm-error">', '</label>');
+            $serie = $this->serie_model->first();
+            $group = $this->group_model->first();
+            $unit_measure = $this->unit_model->first();
 
             if ($this->form_validation->run() === true) {
 
@@ -116,11 +119,11 @@ class Product_model extends CI_Model
                 /** OBTENERMOS VALORES DE LOS INPUT **/
                 $obj_product['codigo'] = $codigo;
                 $obj_product['nombre_comercial'] = strtoupper($this->input->post('comercial'));
-                $obj_product['nombre_generico'] = strtoupper($this->input->post('generico'));
+                $obj_product['nombre_generico'] = strtoupper($this->input->post('comercial'));
                 $obj_product['dimension'] = strtoupper($this->input->post('dimension'));
                 $obj_product['precio_venta'] = $this->input->post('precio_venta');
                 $obj_product['precio_compra'] = $this->input->post('precio_costo');
-                $obj_product['precio_venta_mayor'] = $this->input->post('higher_price');
+                $obj_product['precio_venta_mayor'] = $this->input->post('precio_venta');
                 // $obj_product['precio_venta_express'] = $this->input->post('express_price');
                 // $obj_product['precio_venta_laboratorio'] = $this->input->post('lab_price');
                 $obj_product['precio_venta_express'] = $this->input->post('precio_venta');
@@ -130,14 +133,18 @@ class Product_model extends CI_Model
                 $obj_product['fecha_registro'] = date('Y-m-d');
                 $obj_product['fecha_modificacion'] = date('Y-m-d');
                 $obj_product['estado'] = ACTIVO;
-                $obj_product['grupo_id'] = $this->input->post('grupo');
-                $obj_product['subgrupo_id'] = $this->input->post('subgrupo');
+                // $obj_product['grupo_id'] = $this->input->post('grupo');
+                // $obj_product['subgrupo_id'] = $this->input->post('subgrupo');
+                $obj_product['grupo_id'] = $group->id;
+                $obj_product['subgrupo_id'] = $group->id;
                 $obj_product['modelo_id'] = $this->input->post('modelo');
-                $obj_product['unidad_medida_id'] = $this->input->post('medida');
+                // $obj_product['unidad_medida_id'] = $this->input->post('medida');
+                $obj_product['unidad_medida_id'] = $unit_measure->id;
                 $obj_product['user_created'] = get_user_id_in_session();
                 $obj_product['user_updated'] = get_user_id_in_session();
                 $obj_product['tipo_producto_id'] = 1;
-                $obj_product['serie_id'] = $this->input->post('serie');
+                // $obj_product['serie_id'] = $this->input->post('serie');
+                $obj_product['serie_id'] = $serie->id;
                 $obj_product['porcentaje_comision'] = $this->input->post('percent_commission') / 100;
                 //$obj_product['imei1'] = $this->input->post('imei1');
                 //$obj_product['imei2'] = $this->input->post('imei2');

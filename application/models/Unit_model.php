@@ -13,6 +13,11 @@ class Unit_model extends CI_Model
         parent::__construct();
     }
 
+    public function first()
+    {
+        return $this->db->get('unidad_medida')->row();
+    }
+
     public function get_units($type = 'object'){
         return $this->db->get_where('unidad_medida', array('estado'=>get_state_abm('ACTIVO')))->result($type);
     }

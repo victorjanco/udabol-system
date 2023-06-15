@@ -31,7 +31,7 @@ $url_action = site_url('purchase/r');
             </div>
         </div>
 
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" hidden>
             <div class="col-lg-12">
                 <label for="generico">Nombre Genérico:</label>
             </div>
@@ -121,8 +121,8 @@ $url_action = site_url('purchase/r');
         </div>
 	</div>
 
-	<div class="row clearfix">
-	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+	<div class="row clearfix" hidden>
+	    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
             <div class="col-lg-12">
                 <label for="grupo">Serie:</label>
             </div>
@@ -178,7 +178,7 @@ $url_action = site_url('purchase/r');
 
         <!-- MARCA  -->
 
-        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
             <div class="col-lg-12">
                 <label for="medida">Medida:</label>
             </div>
@@ -229,7 +229,7 @@ $url_action = site_url('purchase/r');
             </div>
         </div>
 
-        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" hidden>
             <div class="col-lg-12">
                 <label for="higher_price">P. venta mayorista:</label>
             </div>

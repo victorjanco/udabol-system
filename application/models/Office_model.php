@@ -13,6 +13,11 @@ class Office_model extends CI_Model
         $this->load->library('form_validation');
     }
 
+    public function first()
+    {
+        return $this->db->get('sucursal')->row();
+    }
+
     public function get_branch_office_id($branch_office_id)
     {
         return $this->db->get_where('sucursal', array('id' => $branch_office_id))->row();

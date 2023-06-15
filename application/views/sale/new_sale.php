@@ -60,7 +60,7 @@ $url_action = site_url('sale/register_sale');
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" >
+                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" hidden>
                         <div class="form-group">
                             <div class="form-line">
                                 <b>Tipo Cliente</b>

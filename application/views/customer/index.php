@@ -23,7 +23,7 @@
                     <th class="text-center"><b>C.I.</b></th>
 <!--                    <th class="text-center"><b>NIT.</b></th>-->
                     <th class="text-center"><b>Nombre del cliente</b></th>
-                    <th class="text-center"><b>Tipo cliente</b></th>
+                    <!-- <th class="text-center"><b>Tipo cliente</b></th> -->
                     <th class="text-center"><b>Telefono</b></th>
                     <th class="text-center"><b>Estado</b></th>
                     <th class="text-center">Opciones</th>

@@ -146,7 +146,7 @@ if (isset($customer)) {
             </div>
         </div>
     </div>
-    <div class="row clearfix">
+    <div class="row clearfix" hidden>
         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
             <label class="form-control-label">Tipo Cliente</label>
         </div>

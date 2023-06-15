@@ -527,9 +527,7 @@ function register_sale() {
                     });
                 }else if (response.login === true) {
                     login_session();
-                } else if (response.dosage_message !== null) {
-					swal('Problemas con Dosificacion',response.dosage_message , 'error');
-                } else if (response.success === false) {
+                }else if (response.success === false) {
                     $('.modal-error').remove();
                     if (response.messages !== null) {
                         $.each(response.messages, function (key, value) {
@@ -543,6 +541,8 @@ function register_sale() {
                         swal('Error', 'Eror al registrar los datos.', 'error');
                     }
 
+                } else if (response.dosage_message !== null) {
+					swal('Problemas con Dosificacion',response.dosage_message , 'error');
                 }
             },error: function (error) {
                 ajaxStop();

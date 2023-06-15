@@ -232,6 +232,7 @@ class Sale_model extends CI_Model
 				'dosage' => FALSE,
 				'cash' => FALSE
 			);
+
 			$customer_id = $this->input->post('id_customer');
 			$customer_name = $this->input->post('nombre_factura');
 			$customer_nit = $this->input->post('nit');
@@ -254,12 +255,16 @@ class Sale_model extends CI_Model
 						'sincronizado' => 0,
 						'estado' => get_state_abm('ACTIVO'),
 						'sucursal_id' => get_branch_id_in_session(),
-						'usuario_id' => get_user_id_in_session(),
+						// 'usuario_id' => get_user_id_in_session(),
+						'user_created' => get_user_id_in_session(),
 						'user_updated' => get_user_id_in_session()
 					);
 					
 					$this->db->insert('cliente', $data_customer);
 					$customer = $this->db->get_where('cliente', $data_customer)->row();
+					if(!isset($customer->id)){
+						throw new Exception("Cliente no esta registrado");
+					}
 					$customer_id = $customer->id;
 				}
 			}else{
@@ -269,8 +274,21 @@ class Sale_model extends CI_Model
 			}
 	
 			if (verify_session()) {
-	
-				// if(verify_cash_session()){
+				$validation_rules = array(
+                    array(
+                        'field' => 'nombre_factura',
+                        'label' => 'Nombre',
+                        'rules' => 'trim|required'
+                    ),
+                    array(
+                        'field' => 'nit',
+                        'label' => 'Nit/CI',
+                        'rules' => 'trim|required'
+                    ),
+                );
+				$this->form_validation->set_rules($validation_rules);
+                $this->form_validation->set_error_delimiters('<label class="modal-error">', '</label>');
+				if ($this->form_validation->run() === TRUE) {
 					$sale_subtotal = floatval($this->input->post('sale_subtotal'));
 					$sale_discount = floatval($this->input->post('sale_discount'));
 					$sale_total = floatval($this->input->post('sale_total'));
@@ -640,9 +658,11 @@ class Sale_model extends CI_Model
 	
 						}
 					}
-				// } else {
-				// 	$response['cash'] = TRUE;
-				// }
+				} else {
+					foreach ($_POST as $key => $value) {
+                        $response['messages'][$key] = form_error($key);
+                    }
+				}
 			} else {
 				$response['login'] = TRUE;
 			}

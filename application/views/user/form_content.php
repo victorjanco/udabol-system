@@ -130,7 +130,7 @@ $title = "Registro de Usuario y Asignacion de Privilegios";
                     </div>
                 </div>
             </div>
-            <div class="row clearfix">
+            <div class="row clearfix" hidden>
                 <div class="col-lg-4 col-md-2 col-sm-12 col-xs-12">
                     <label class="form-control-label">Seleccion de Sucursales</label>
                 </div>
