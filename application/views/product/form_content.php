@@ -121,10 +121,10 @@ $url_action = site_url('purchase/r');
         </div>
 	</div>
 
-	<div class="row clearfix" hidden>
+	<div class="row clearfix">
 	    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
             <div class="col-lg-12">
-                <label for="grupo">Serie:</label>
+                <label for="grupo">Categoria:</label>
             </div>
             <div class="col-lg-12">
                 <div class="form-group">
