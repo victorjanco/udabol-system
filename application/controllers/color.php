@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ing. Reyes Fuentes Renato (Green Ranger)
- * Date: 21/01/2020
- * Time: 14:30 PM
- */
 
 class Color extends CI_Controller
 {
