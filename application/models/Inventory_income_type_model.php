@@ -123,7 +123,7 @@ class Inventory_income_type_model extends CI_Model
                         'decripcion' => strtoupper($this->input->post('add_description')),
                         'fecha_registro' => $date_hour,
                         // 'fecha_modificacion' => $date_hour,
-                        'url' => 'inventory_income/new_inventory_income',
+                        'url' => 'inventory/common',
                         // 'acceso' => ACTIVO,
                         // 'contenido' => ACTIVO,
                         'estado' => ACTIVO,
