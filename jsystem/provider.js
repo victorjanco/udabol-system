@@ -3,6 +3,14 @@
  */
 $(document).ready(function () {
     get_provider_list();
+    $("#btn_excel_export_provider").on('click', function () {
+        $.redirect(siteurl('report_provider/export_to_excel_provider'), {
+            report_start_date: $("#start_date").val(),
+            report_end_date: $("#end_date").val(),
+            branch_office_report: $("#branch_office_report").val(),
+            warehouse_report: $("#warehouse_report").val()
+        }, 'POST','_blank');
+    });
 });
 
 $(function () {
@@ -141,4 +149,75 @@ function delete_register(element) {
 
 function activate_provider(elemento) {
     reactivate_register_commom(elemento, 'provider/activate_provider');
+}
+
+
+
+/****
+ * 
+ * 
+ */
+
+function get_report_provider_list() {
+    var tabla = $('#report_provider_list').DataTable({
+        'paging': true,
+        'info': true,
+        'filter': true,
+        'stateSave': true,
+        'processing': true,
+        'serverSide': true,
+        'destroy': true,
+        'ajax': {
+            "url": siteurl('report_provider/get_report_provider_list'),
+            "type": "post",
+            "data": {
+                report_start_date: $("#start_date").val(),
+                report_end_date: $("#end_date").val(),
+                branch_office_report: $("#branch_office_report").val(),
+                warehouse_report: $("#warehouse_report").val()
+            }
+        },
+        'columns': [
+            {data: 'id'},
+            {data: 'nombre_proveedor'},
+            {data: 'direccion'},
+            {data: 'telefono'},
+            {data: 'nombre_comercial'},
+            {data: 'stock', class: 'text-center'},
+            {data: 'estado', class: 'text-center'}
+        ],
+        "columnDefs": [
+            {
+                targets: 0,
+                visible: false,
+                searchable: false,
+            },
+            {
+                targets: 6,
+                orderable: false,
+                render: function (data, type, row) {
+                    if (row.estado == 0) {
+                        return "<span class='label label-danger'><i class='fa fa-times'></i> INACTIVO</span>"
+                    } else {
+                        return "<span class='label label-success'><i class='fa fa-check'></i> ACTIVO</span>"
+                    }
+                }
+            }
+            // {
+            //     targets: 12,
+            //     orderable: false,
+            //     render: function (data, type, row) {
+            //         // if(row.estado == 0){
+            //         //     return load_buttons_crud(23, 'formulario');
+            //         // }else{
+            //             return load_buttons_crud(22, 'formulario');
+            //         // }
+            //         //  '<a onclick="new_register_form(this)" class="btn btn-success"><i class="fa fa-plus"></i> Nuevo Motivo</a>'
+            //         // return '<li><a onclick="imprimir_codigo(this)" target="_blank" class="btn btn-success"><i class="fa fa-print"></i> Imprimir </a></li>'
+            //     }
+            // }
+        ],
+        "order": [[0, "asc"]],
+    });
+    tabla.ajax.reload();
 }
