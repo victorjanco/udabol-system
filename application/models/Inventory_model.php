@@ -211,7 +211,7 @@ class Inventory_model extends CI_Model
 				$fila .= '<td align="right"><input  value="' . $sale_price . '"  name="precio_venta[]" hidden/>' . $sale_price . '</td>';
 				$fila .= '<td align="right"><input  value="' . $buy_price . '" name="precio_compra[]" hidden/>' . $buy_price . '</td>';
 				$fila .= '<td align="right"><input type="text" value="' . $quantity . '" name="cantidad[]" hidden/>' . $quantity . '</td>';
-				$fila .= '<td><input type="text" value="' . $warehouse_obj->id . '" name="almacen[]" hidden/><input name="codigo_nro_lote[]" value="' . $code_nro_lote . '" hidden/>' . $warehouse_obj->nombre . '</td>';
+				$fila .= '<td hidden><input type="text" value="' . $warehouse_obj->id . '" name="almacen[]" hidden/><input name="codigo_nro_lote[]" value="' . $code_nro_lote . '" hidden/>' . $warehouse_obj->nombre . '</td>';
 				$fila .= '<td><input type="text" value="' . $provider_obj->id . '" name="proveedor[]" hidden/>' . $provider_obj->nombre . '</td>';
 				$fila .= '<td class="text-center"><a class="elimina btn-danger btn" >Eliminar</a></td></tr>';
 				$response['success'] = true;

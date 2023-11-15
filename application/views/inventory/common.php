@@ -238,7 +238,7 @@ $url_action = site_url('purchase/r');
                                         <th class="text-center" style="width: 10%"><b>P. Venta</b></th>
                                         <th class="text-center" style="width: 10%"><b>P. Compra</b></th>
                                         <th class="text-center" style="width: 10%"><b>Cantidad </b></th>
-                                        <th class="text-center" style="width: 15%"><b>Almacen</b></th>
+                                        <th class="text-center" style="width: 15%" hidden><b>Almacen</b></th>
                                         <th class="text-center" style="width: 30%"><b>Proveedor</b></th>
                                         <th class="text-center"><b>Opciones</b></th>
                                     </tr>
